@@ -1,10 +1,12 @@
-import Product from "./Product"
+import Product from "./Product.jsx"
 function App() {
+  const productName = "laptop"
+  const price = 45000
   
    return (
     
     <>
-    <Product />
+    <Product productName={productName} price={price} />
     </>
   )
 }
