@@ -1,0 +1,7 @@
+.blog-post{
+    border: 5px solid rgb(54, 3, 4);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+}

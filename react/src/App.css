@@ -1,7 +1,11 @@
-.App{
+.f{
     display:flex;
     align-items: center;
     justify-content: center;
+    border: 10px solid rgb(128, 60, 0);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10%;
 }
 .s{
     color:green;
