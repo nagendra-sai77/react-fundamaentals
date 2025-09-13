@@ -1,0 +1,22 @@
+.title{
+    font-style: italic;
+    color : blue;
+    font-size : 40px;
+}
+.price{
+    font-weight: bold;
+    color : orange;
+    font-size : 30px;
+}
+.container{
+    text-align: center;
+    border : 2px solid black;
+    margin : 20px;
+    padding : 30px;
+    width : 250px;
+    border-radius: 5%;
+}
+.photo{
+    height:50px;
+    width: 50px;
+}

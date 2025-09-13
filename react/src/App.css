@@ -1,0 +1,11 @@
+.App{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.s{
+    color:green;
+}
+.p{
+    color:red;
+}

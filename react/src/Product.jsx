@@ -1,9 +1,17 @@
-function Product({productName,price}) {
+
+function Product(App) {
 
     return (
-        <div><p>Product</p>
-            <h1>{productName}</h1>
-            <h2>{price}</h2>
+        <div className="container">
+            <img className="photo" src={App.photo} alt="product" />
+            <h1>{App.photo}</h1>
+            <h1 className="title">{App.productName}</h1>
+            <h2 className="price">{App.price}</h2>
+            <h2>{App.blood}</h2>
+            <h2>{App.dob}</h2>
+
+
+
         </div>
     )
 }
