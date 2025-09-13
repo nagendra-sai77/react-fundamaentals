@@ -1,50 +1,55 @@
 import Product from "./Product.jsx"
-import "./Product.css"
+
 import "./App.css"
-import BlogPost from "./BlogPost.jsx"
+import { useState } from "react"
+
 
 
 function App() {
-  const productsName = [{
-    product: "iphone 14 pro max",
-    price: 300000,
-    isAvailable: true
-  },
-  {
-    product: "iphone 14 pro",
-    price: 30000,
-    isAvailable: true
-  },
-  {
-    product: "iphone 14 ",
-    price: 3000,
-    isAvailable: true
-  }]
-  const posts = [{
-    id:1,
-    author: "pakkurthi",
-    title: "my first blog",
-    content: "this is my first blog post"
-  },
-  {
-    id:2,
-    author: "sai",
-    title: "my second blog",
-    content: "this is my second blog post"
-  },
-  {
-    id:3,
-    author: "gopi",
-    title: "my third blog",
-    content: "this is my third blog post"
-  }]
-
+  const [count, setCount] = useState(0)
+  const [email , setEmail] = useState("")
+  const [password , setPassword] = useState("")
+  const handleEmail =(e)=>{
+    setEmail(e.target.value)
+  }
+  const handlePassword =(e)=>{
+    setPassword(e.target.value)
+  }
+  const handleClick = (name) => {
+    console.log("Button clicked")
+    alert(name)
+  }
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name] : e.target.value
+    })
+  }
+  const handleSubmit = (e) => {
+   
+    e.preventDefault()
+    alert(`email: ${formData.email} \npassword: ${formData.password}`)
+  }
+  const handleIncrerement = () => {
+    setCount((prevCount )=> prevCount + 1)
+    console.log(count)
+  }
+  const[formData , setFormData] = useState({
+    email : "",
+    password : ""
+  })
+  
 
   return (
-    <div className="f">
-    {posts.map((post)=> <BlogPost key={post.id} author={post.author}
-    title={post.title}
-    content={post.content} />)}
+    <div>
+      <p>{count}</p>
+      
+      <button onClick={handleIncrerement}>increment</button>
+      <form onSubmit={handleSubmit} >
+      <input type="text" name="email" placeholder="Email" onChange={handleChange}/>
+      <input type="password"  name="pass" placeholder="pass" onChange={handleChange}/>
+      <button type="submit">submit</button>
+      </form>
     </div>
 
 
